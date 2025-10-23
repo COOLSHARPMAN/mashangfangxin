@@ -1,7 +1,0 @@
-Thu, 23 Oct 2025 09:12:34 mashangfangxin.py[line:221] DEBUG ¼ÇÂ¼debug information
-Thu, 23 Oct 2025 09:12:34 mashangfangxin.py[line:222] INFO ¼ÇÂ¼info information
-Thu, 23 Oct 2025 09:12:36 _internal.py[line:97] INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:6789
- * Running on http://192.168.20.120:6789
-Thu, 23 Oct 2025 09:12:36 _internal.py[line:97] INFO [33mPress CTRL+C to quit[0m
