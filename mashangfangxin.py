@@ -158,15 +158,17 @@ class MyWindows(QtWidgets.QMainWindow, Ui_MainWindow):
         result = get_name_ex(self.edt_name.text(), client)
         if isinstance(result, tuple):
             from_name, third_ent_id, from_id, ref_ent_id = result
-            self.edt_id.setText(str(third_ent_id))
+            #注意这里的edt_id和edt_user必须和edt_ent设置成相同的才行
+            self.edt_id.setText(str(ref_ent_id))
             self.edt_ent.setText(str(ref_ent_id))
-            self.edt_user.setText(str(third_ent_id))
+            self.edt_user.setText(str(ref_ent_id))
             # 保存更新后的配置
             confile = read_config('config.conf')
             if confile:
-                confile.set('ZFB', 'ent_id', str(third_ent_id))
+                # 注意这里的edt_id和ref_user_id必须和ref_ent_id设置成相同的才行
+                confile.set('ZFB', 'ent_id', str(ref_ent_id))
                 confile.set('ZFB', 'ref_ent_id', str(ref_ent_id))
-                confile.set('ZFB', 'ref_user_id', str(third_ent_id))
+                confile.set('ZFB', 'ref_user_id', str(ref_ent_id))
                 save_config('config.conf', confile)
 
     def start_service(self):
