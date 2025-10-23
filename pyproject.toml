@@ -1,0 +1,12 @@
+[project]
+name = "mashangfangxin"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.13"
+dependencies = [
+    "chardet>=5.2.0",
+    "flask>=3.1.2",
+    "pyinstaller>=6.16.0",
+    "pyside6>=6.10.0",
+    "requests>=2.32.5",
+]
