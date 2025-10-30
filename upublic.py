@@ -1,6 +1,6 @@
 import winreg
 import chardet
-import datetime
+from datetime import datetime
 import os
 import configparser
 import random
@@ -108,7 +108,7 @@ def get_int(start,end,os=0,float=False):
 
 def convert_date_format(date_str):
     # 假设date_str是一个有效的8位日期字符串
-    date_obj = datetime.datetime.strptime(date_str, '%Y%m%d')
+    date_obj = datetime.strptime(date_str, '%Y%m%d')
     formatted_date = date_obj.strftime('%Y-%m-%d')
     return formatted_date
 

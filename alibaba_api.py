@@ -119,9 +119,9 @@ def handle_interface_request(interface_id, request, confile):
             # 更新配置
             save_config('config.conf', {
                 'ZFB': {
-                    'ent_id': result[1],
+                    'ent_id': result[3],
                     'ref_ent_id': result[3],
-                    'ref_user_id': result[1]
+                    'ref_user_id': result[3]
                 }
             })
             return f'{result[0]},{result[1]},{result[2]},{result[3]}'
@@ -278,9 +278,9 @@ def handle_interface_8_9(in_value, ability, ref_ent_id, ent_id, ref_user_id, int
             from_name = response['result']['model_list'][0]['from_user_name']
         else:
             a, b, c, d = get_name_ex(in_value['ent_name'], ability)
-            from_id = c
+            from_id = b
             from_name = a
-            third_ent_id = b
+
 
         # 大箱入库上传
         MyLog.info('大箱入库上传')
